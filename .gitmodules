@@ -4,3 +4,6 @@
 [submodule "src/users"]
 	path = src/users
 	url = git@github.com:mallowigi/users.git
+[submodule "src/common"]
+	path = src/common
+	url = git@github.com:mallowigi/common.git
