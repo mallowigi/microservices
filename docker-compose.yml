@@ -1,0 +1,138 @@
+version: "3"
+
+# Volumes
+volumes:
+  mongodb:
+
+# Services
+services:
+  #  gateway:
+  #    build:
+  #      context: ../../src
+  #      dockerfile: services/gateway/Dockerfile.dev
+  #      args:
+  #        SERVICE: gateway
+  #    restart: always
+  #    volumes:
+  #      - ../../src/common:/src/services/gateway/common
+  #      - ../../src/services/gateway/src:/src/services/gateway/src
+  #    ports:
+  #      - "3000:3000"
+  #    environment:
+  #      - MONGODB_URL=mongodb://mongo
+  #      - REDIS_URL=redis://redis
+  #      - NATS_URL=nats://nats:4222
+  #    depends_on:
+  #      - auth
+  #      - articles
+  #      - users
+  #      - redis
+
+  #  auth:
+  #    build:
+  #      context: ../../src
+  #      dockerfile: services/auth/Dockerfile.dev
+  #      args:
+  #        SERVICE: auth
+  #    restart: always
+  #    volumes:
+  #      - ../../src/common:/src/services/auth/common
+  #      - ../../src/services/auth/src:/src/services/auth/src
+  #    ports:
+  #      - "50050:50050"
+  #    environment:
+  #      - MONGODB_URL=mongodb://mongo
+  #      - NATS_URL=nats://nats:4222
+  #    depends_on:
+  #      - users
+  #      - mongo
+
+  #  authorization:
+  #    build:
+  #      context: ../../src
+  #      dockerfile: services/authorization/Dockerfile.dev
+  #      args:
+  #        SERVICE: authorization
+  #    restart: always
+  #    volumes:
+  #      - ../../src/common:/src/services/authorization/common
+  #      - ../../src/services/authorization/src:/src/services/authorization/src
+  #    ports:
+  #      - "50051:50050"
+  #    environment:
+  #      - MONGODB_URL=mongodb://mongo
+  #      - NATS_URL=nats://nats:4222
+  #    depends_on:
+  #      - mongo
+  #      - users
+  #      - articles
+  #      - comments
+
+  #  users:
+  #    build:
+  #      context: ../../src
+  #      dockerfile: services/users/Dockerfile.dev
+  #      args:
+  #        SERVICE: users
+  #    restart: always
+  #    volumes:
+  #      - ../../src/common:/src/services/users/common
+  #      - ../../src/services/users/src:/src/services/users/src
+  #    ports:
+  #      - "50052:50050"
+  #    environment:
+  #      - MONGODB_URL=mongodb://mongo
+  #      - NATS_URL=nats://nats:4222
+  #    depends_on:
+  #      - mongo
+
+  #  comments:
+  #    build:
+  #      context: ../../src
+  #      dockerfile: services/comments/Dockerfile.dev
+  #      args:
+  #        SERVICE: comments
+  #    restart: always
+  #    volumes:
+  #      - ../../src/common:/src/services/comments/common
+  #      - ../../src/services/comments/src:/src/services/comments/src
+  #    ports:
+  #      - "50054:50050"
+  #    environment:
+  #      - MONGODB_URL=mongodb://mongo
+  #      - NATS_URL=nats://nats:4222
+  #    depends_on:
+  #      - mongo
+  #      - nats
+
+  #  articles:
+  #    build:
+  #      context: ../../src
+  #      dockerfile: services/articles/Dockerfile.dev
+  #      args:
+  #        SERVICE: articles
+  #    restart: always
+  #    volumes:
+  #      - ../../src/common:/src/services/articles/common
+  #      - ../../src/services/articles/src:/src/services/articles/src
+  #    ports:
+  #      - "50055:3000"
+  #      - "50056:50050"
+  #    environment:
+  #      - MONGODB_URL=mongodb://mongo
+  #      - NATS_URL=nats://nats:4222
+  #    depends_on:
+  #      - mongo
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongodb:/data/db
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis
+
+  nats:
+    image: nats
