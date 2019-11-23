@@ -1,0 +1,6 @@
+[submodule "src/auth"]
+	path = src/auth
+	url = git@github.com:mallowigi/auth.git
+[submodule "src/users"]
+	path = src/users
+	url = git@github.com:mallowigi/users.git
