@@ -7,3 +7,9 @@
 [submodule "src/common"]
 	path = src/common
 	url = git@github.com:mallowigi/common.git
+[submodule "src/authorization"]
+	path = src/authorization
+	url = git@github.com:mallowigi/microblog-authorization.git
+[submodule "src/gateway"]
+	path = src/gateway
+	url = git@github.com:mallowigi/microblog-gateway.git
