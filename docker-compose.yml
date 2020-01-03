@@ -136,6 +136,7 @@ services:
 
   nats:
     image: nats
+    entrypoint: "/nats-server -DV"
     expose:
       - "4222"
     ports:
