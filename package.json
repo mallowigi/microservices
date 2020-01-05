@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compose:dev": "docker-compose -f deploy/docker/dev.yaml up --build"
   },
   "author": "",
   "license": "ISC",
