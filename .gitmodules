@@ -16,3 +16,6 @@
 [submodule "src/articles"]
 	path = src/articles
 	url = git@github.com:mallowigi/microblog-articles.git
+[submodule "src/comments"]
+	path = src/comments
+	url = git@github.com:mallowigi/microblog-comments.git
