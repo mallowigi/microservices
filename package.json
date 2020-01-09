@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compose:dev": "docker-compose -f deploy/docker/dev.yaml up --build",
-    "semantic-release": "semantic-release"
+    "compose:dev": "docker-compose -f ~/IdeaProjects/microservices/deploy/docker/dev.yaml up --build",
+    "semantic-release": "semantic-release",
+    "lerna": "lerna bootstrap"
   },
   "author": "",
   "license": "ISC",
