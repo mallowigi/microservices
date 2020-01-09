@@ -13,3 +13,6 @@
 [submodule "src/gateway"]
 	path = src/gateway
 	url = git@github.com:mallowigi/microblog-gateway.git
+[submodule "src/articles"]
+	path = src/articles
+	url = git@github.com:mallowigi/microblog-articles.git
