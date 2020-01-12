@@ -19,3 +19,6 @@
 [submodule "src/comments"]
 	path = src/comments
 	url = git@github.com:mallowigi/microblog-comments.git
+[submodule "src/frontend"]
+	path = src/frontend
+	url = git@github.com:mallowigi/microblog-frontend.git
