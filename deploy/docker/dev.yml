@@ -68,23 +68,23 @@ services:
   #      - articles
   #      - comments
 
-  users:
-    build:
-      context: ../../src
-      dockerfile: users/Dockerfile
-      args:
-        SERVICE: users
-    restart: always
-    volumes:
-      - ../../src/common:/src/users/common
-      - ../../src/users/src:/src/users/src
-    ports:
-      - "50052:50050"
-    environment:
-      - MONGODB_URL=mongodb://mongo
-      - NATS_URL=nats://nats:4222
-    depends_on:
-      - mongo
+#  users:
+#    build:
+#      context: ../../src
+#      dockerfile: users/Dockerfile
+#      args:
+#        SERVICE: users
+#    restart: always
+#    volumes:
+#      - ../../src/common:/src/users/common
+#      - ../../src/users/src:/src/users/src
+#    ports:
+#      - "50052:50050"
+#    environment:
+#      - MONGODB_URL=mongodb://mongo
+#      - NATS_URL=nats://nats:4222
+#    depends_on:
+#      - mongo
 
   #  comments:
   #    build:
